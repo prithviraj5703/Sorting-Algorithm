@@ -20,6 +20,17 @@ To write a program to perform selection sort and insertion sort using python pro
 ## Program:
 i)	#Selection Sort
 ```
+def selection_sort(nums):
+    for i in range(len(nums)):
+        lowest_value_index = i
+        for j in range(i+1,len(nums)):
+            if nums[j]<nums[lowest_value_index]:
+                lowest_value_index=j
+        nums[i],nums[lowest_value_index]=nums[lowest_value_index],nums[i]
+
+list_of_nums = eval(input())
+selection_sort(list_of_nums)
+print(list_of_nums)
 
 
 
@@ -28,7 +39,23 @@ i)	#Selection Sort
 ```
 ii)	#Insertion Sort
 ```
-
+''' 
+Program to sort the elements in the list using the Insertion Sort algorithm.
+Developed by:V.Prithviraj
+RegisterNumber: 22004659
+'''
+def insertion_sort(nums):
+    for i in range(1,len(nums)):
+        item_to_insert=nums[i]
+        j=i-1
+        while j>= 0 and nums[j]>item_to_insert:
+            nums[j+1]=nums[j]
+            j-=1
+        nums[j+1] = item_to_insert
+        
+list_of_nums = eval(input())
+insertion_sort(list_of_nums)
+print(list_of_nums)
 
 
 
@@ -37,6 +64,8 @@ ii)	#Insertion Sort
 ```
 
 ## Output:
+![linaer search and binary search(2)](https://user-images.githubusercontent.com/121418418/214894432-352c4488-63e9-4a25-b6de-602a4d203fff.png)
+![linaer search and binary search(2)](https://user-images.githubusercontent.com/121418418/214894494-806c632d-f76a-4ef8-b434-3b7864957f55.png)
 
 
 ## Result:
